@@ -4,10 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--无参构造创建A对象-->
-    <bean id="a" class="com.gupao.reflect.ioc.A"></bean>
+    <bean id="a" class="com.gupao.java_core.reflect.ioc.A"></bean>
 
     <!--静态方法创建B对象-->
-    <bean id="b" class="com.gupao.reflect.ioc.A" factory-method="createB"></bean>
+    <bean id="b" class="com.gupao.java_core.reflect.ioc.A" factory-method="createB"></bean>
 
     <!--实例方法创建C对象-->
     <bean id="c" factory-bean="a" factory-method="createC"></bean>
