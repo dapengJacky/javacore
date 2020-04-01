@@ -1,6 +1,5 @@
-package com.gupao.concurrent_thread;
+package com.gupao.concurrent_thread.basic;
 
-import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
 /**
