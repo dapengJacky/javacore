@@ -21,7 +21,7 @@ public class Main {
         //装 类 全路径的集合
         HashSet<String> allClassPathSet = new HashSet<String>();
 
-        doScanner(allClassPathSet, "com.gpseven.corejava.demo5.ioc");
+        doScanner(allClassPathSet, "com.gupao.java_core.annotation.demo5");
 
         for (String className : allClassPathSet) {
             Class<?> clazz = Class.forName(className);
