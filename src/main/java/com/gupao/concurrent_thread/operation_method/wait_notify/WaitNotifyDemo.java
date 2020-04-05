@@ -1,6 +1,5 @@
-package com.gupao.concurrent_thread.operation_method;
+package com.gupao.concurrent_thread.operation_method.wait_notify;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 

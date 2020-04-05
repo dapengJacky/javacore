@@ -1,4 +1,4 @@
-package com.gupao.concurrent_thread.operation_method;
+package com.gupao.concurrent_thread.operation_method.join;
 
 /**
  * @author jacky
