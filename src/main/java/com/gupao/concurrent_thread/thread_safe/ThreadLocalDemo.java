@@ -23,7 +23,7 @@ public class ThreadLocalDemo {
             threads[i] = new Thread(()->{
 //               num+=5;
                 //拿到初始值
-                int num=threadLocal.get();//保证线程之间的隔离性,每个线程内部都有一个ThreadLocalMap属性存储当前线程的变量
+                int num=threadLocal.get();//保证线程之间的隔离性,每个线程内部都有一个ThreadLocalMap（entry数组）存储当前线程的变量
                 num+=5;
                 threadLocal.set(num);
                 System.out.println(Thread.currentThread().getName()+": "+num);

@@ -12,7 +12,7 @@ public class WaitNotifyDemo {
 
     public static void main(String[] args) {
         Queue<String> bags= new LinkedList<>();
-        int size=4;
+        int size=10;
         Producer producer= new Producer(bags,size);
         Consumer consumer = new Consumer(bags,size);
 

@@ -9,7 +9,7 @@ import java.util.Queue;
  */
 public class Producer implements Runnable {
 
-    private final Queue<String> bags;
+    private Queue<String> bags;
     private int size;
 
     public Producer(Queue<String> bags, int size) {
@@ -24,7 +24,7 @@ public class Producer implements Runnable {
             i++;
             synchronized (bags){
                 while (size==bags.size()){
-                    System.out.println("生产者队列bags满了,陷入阻塞");
+                    System.out.println("bags满了,陷入阻塞");
                     //TODO 阻塞
                     try {
                         bags.wait();
@@ -37,10 +37,10 @@ public class Producer implements Runnable {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("生产者生产:bag"+i);
+                System.out.println("生产者-生产:bag"+i);
                 bags.add("bag"+i);
                 //TODO 唤醒处于阻塞状态的消费者
-                bags.notify();
+                bags.notifyAll();
             }
         }
     }

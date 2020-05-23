@@ -8,7 +8,7 @@ import java.util.Queue;
  * @date 2020/4/1
  */
 public class Consumer implements Runnable {
-    private final Queue<String> bags;
+    private Queue<String> bags;
     private int size;
 
     public Consumer(Queue<String> bags, int size) {
@@ -21,7 +21,7 @@ public class Consumer implements Runnable {
         while (true){
             synchronized (bags){
                 while (bags.isEmpty()){
-                    System.out.println("消费者队列bags为空,陷入阻塞");
+                    System.out.println("bags为空,陷入阻塞");
                     try {
                         bags.wait();
                     } catch (InterruptedException e) {
@@ -36,7 +36,7 @@ public class Consumer implements Runnable {
                 String bag = bags.remove();
                 System.out.println("消费者消费:"+bag);
                 //TODO 唤醒处于阻塞中的生产者
-                bags.notify();
+                bags.notifyAll();
             }
 
         }
