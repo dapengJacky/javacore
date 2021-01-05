@@ -1,6 +1,5 @@
 package com.gupao.io.nio.disk;
 
-import com.gupao.java_core.reflect.ioc.B;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

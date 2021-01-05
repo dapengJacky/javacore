@@ -1,9 +1,6 @@
 package com.gupao.concurrent_thread.thread_pool;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * 腾讯课堂搜索【咕泡学院】
@@ -16,6 +13,6 @@ public class ExecutorsSelf {
     public static ExecutorService newFixedThreadPool(int nThreads) {
         return new ThreadPoolSelf(nThreads, nThreads,
                 0L, TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<Runnable>());
+                new LinkedBlockingQueue<Runnable>(90), (r, executor) -> System.out.println(r.toString()+"executor"+executor.toString()+"is discard"));
     }
 }

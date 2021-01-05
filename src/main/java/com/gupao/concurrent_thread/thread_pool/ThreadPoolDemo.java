@@ -24,7 +24,7 @@ public class ThreadPoolDemo implements Runnable{
     @Override
     public void run() {
         try {
-            Thread.sleep(10);
+            Thread.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
